@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  display: block;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -6,8 +14,100 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.border-container {
+  display: flex;
+  flex-direction: column;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  margin: 10px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+.product {
+  display: flex;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.img img {
+  float: left;
+  margin: 10px;
+  width: 180px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid rgb(129, 35, 206);
+  padding: 5px;
+  cursor: pointer;
+}
+.info-container {
+  padding: 10px;
+  width: 100%;
+  max-height: 300px;
+  text-align: center;
+}
+
+.title {
+  color: #13424a;
+}
+
+.quantity-buttons {
+  min-width: 120px;
+  border: 1px solid #13424a;
+  font-family: Arial;
+  width: 120px;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.addToChartButton {
+  background-color: salmon;
+  padding: 5px 25px;
+  color: white;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  min-height: 40px;
+  border: 1px solid;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.quantity-buttons span {
+  font-size: 18px;
+  margin: 15px;
+}
+
+.quantity-buttons button {
+  top: 0;
+  width: 30px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  border: 0;
+  background: 0 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.filterButton {
+  margin-top: 20px;
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px;
+  color: white;
+  background-color: #56cfe1;
+}
+.filterButton:hover {
+  background-color: #71d4da;
+}
+.filterButtonActive {
+  background-color: #2a888d;
 }
