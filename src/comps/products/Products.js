@@ -1,29 +1,11 @@
 import React from 'react';
+import { ProductList } from '../../Data/Products';
 import Product from './Product';
-const ProductList = [
-  {
-    id: 1,
-    name: 'White mug',
-    price: 300,
-    img: 'mug1',
-  },
-  {
-    id: 2,
-    name: 'green mug',
-    price: 95,
-    img: 'mug2',
-  },
-  {
-    id: 3,
-    name: 'blue',
-    price: 120,
-    img: 'mug3',
-  },
-];
+
 
 function Products() {
   return (
-    <div>
+    <div className="productsContiner">
       {ProductList.map((product) => {
         return <Product product={product} />;
       })}

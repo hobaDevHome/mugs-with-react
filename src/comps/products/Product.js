@@ -2,7 +2,7 @@ import React from 'react';
 import QuantityButtons from './QuantityButtons';
 
 function Product({ product }) {
-  const { id, name, price, img } = product;
+  const {  name, price, img } = product;
   return (
     <div className="product">
       <div className="img">
