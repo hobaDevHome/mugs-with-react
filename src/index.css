@@ -115,3 +115,26 @@ body {
 .filterButtonActive {
   background-color: #2a888d;
 }
+
+.cartContainer {
+  width: 250px;
+}
+
+.mainDev {
+  display: flex;
+  width: 90%;
+  margin: 12px auto;
+  justify-content: space-between;
+}
+
+.filterDev {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 12px auto;
+}
+
+.filter {
+  width: 70%;
+  margin: 10px auto;
+}
