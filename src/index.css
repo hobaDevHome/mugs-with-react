@@ -6,9 +6,9 @@
 
 .productsContiner {
   display: flex;
-  flex-direction: row;
+
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 body {
@@ -34,7 +34,8 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   margin: 10px;
   padding: 20px;
-  width: 400px;
+  width: 420px;
+  height: 320px;
   border-radius: 5px;
 }
 
@@ -118,6 +119,7 @@ body {
 
 .cartContainer {
   width: 250px;
+  height: auto;
 }
 
 .mainDev {
@@ -127,14 +129,73 @@ body {
   justify-content: space-between;
 }
 
-.filterDev {
+.homeDiv {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  margin: 12px auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter {
-  width: 70%;
+  width: 100%;
   margin: 10px auto;
+}
+
+.cartContainer {
+  width: 250px;
+  float: right;
+}
+.cartTotalPricContainer {
+  text-align: center;
+  padding: 10px;
+}
+.cartTotalPrice {
+  font-size: 25px;
+  font-weight: 700;
+  color: #2a888d;
+}
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e3f5f9;
+  align-items: flex-start;
+
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.cartItemDescriptinContianer {
+}
+
+.cartItemRemoveButtonContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.cartContainer .title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.filter-contianer {
+  display: flex;
+  justify-content: center;
+}
+
+.productsDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  width: 80%;
+  margin-left: 10px;
+
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }

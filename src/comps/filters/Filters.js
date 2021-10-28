@@ -1,13 +1,14 @@
 import React from 'react';
 import Filter from './Filter';
 
-const categories = ['white', 'green', 'blue', 'big', 'small'];
+const categories = ['White', 'Green', 'Blue', 'All', 'Black'];
 
 function Filters() {
+
   return (
     <div className="border-container">
-      <b style={{ marginBottom: '20px' }}>Choose category</b>
-      <div>
+      <b style={{ marginBottom: '20px', alignSelf: 'center', fontSize:"22px" }}>Choose a mug color</b>
+      <div className="filter-contianer">
         {categories.map((cat, index) => {
           return <Filter category={cat} key={index} isAcitve={true} />;
         })}

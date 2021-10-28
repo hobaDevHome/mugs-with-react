@@ -1,12 +1,21 @@
-import React from 'react';
-import { ProductList } from '../../Data/Products';
-import Product from './Product';
+import React from "react";
 
+import Product from "./Product";
+import ProducsProvider from "../../features/product/products";
+
+import { useSelector } from "react-redux";
+import { getSelectedCategory } from "../../features/product/ProductSlice";
 
 function Products() {
+  const selectedCategory = useSelector(getSelectedCategory);
+
   return (
     <div className="productsContiner">
-      {ProductList.map((product) => {
+      {ProducsProvider.filter((prod) => {
+        if (selectedCategory === "all") return true;
+        return prod.category === selectedCategory;
+      })
+      .map((product) => {
         return <Product product={product} />;
       })}
     </div>

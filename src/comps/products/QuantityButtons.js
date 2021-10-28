@@ -1,11 +1,20 @@
-import React from 'react';
 
-function QuantityButtons() {
+
+function QuantityButtons({quantity,setQuantity}) {
+  
+
+  const addQuantity  =() =>{
+    setQuantity(quantity + 1)
+  }
+
+   const subQuantity  =() =>{
+     if(quantity>1)  setQuantity(quantity - 1)
+  }
   return (
     <div className="quantity-buttons">
-      <button>+</button>
-      <span>10</span>
-      <button>-</button>
+      <button onClick={addQuantity}>+</button>
+      <span>{quantity}</span>
+      <button onClick={subQuantity}>-</button>
     </div>
   );
 }

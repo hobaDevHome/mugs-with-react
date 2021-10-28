@@ -1,22 +1,31 @@
-import React from 'react';
-import QuantityButtons from './QuantityButtons';
+import React, { useState } from "react";
+import QuantityButtons from "./QuantityButtons";
+import { useDispatch } from "react-redux";
+import { addItemToCart } from "../../features/cart/CartSlice";
 
 function Product({ product }) {
-  const {  name, price, img } = product;
+  const [quantity, setQuantity] = useState(1);
+  const { name, price, img } = product;
+  const dispatch = useDispatch();
   return (
     <div className="product">
       <div className="img">
         <img src={`./images/${img}.jpg`} alt={name} />
       </div>
       <div className="info-container">
-        <h2 className="title">{name}</h2>
+        <h3 className="title">{name}</h3>
         <p>${price}</p>
-        <QuantityButtons />
+        <QuantityButtons quantity={quantity} setQuantity={setQuantity} />
 
-        <button className="addToChartButton">Add To Cart</button>
-        <p>
-          <a href="/">View Mug Details</a>
-        </p>
+        <button
+          className="addToChartButton"
+          onClick={() => {
+            dispatch(addItemToCart({product,quantity} ));
+          }}
+        >
+          Add To Cart
+        </button>
+        
       </div>
     </div>
   );

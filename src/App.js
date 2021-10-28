@@ -5,16 +5,19 @@ import Products from "./comps/products/Products";
 
 function App() {
   return (
-    <div className="filterDev">
-      <div className="filter">
-        <Filters />
-      </div>
-      <div className="mainDev">
-        <div className="left">
-          <Products />
+    <div className="container">
+      <div className="homeDiv">
+        <div className="filter">
+          <Filters />
         </div>
-        <div className="right">
-          <Cart />
+
+        <div className="productsDiv">
+          <div className="left">
+            <Products />
+          </div>
+          <div className="right">
+            <Cart />
+          </div>
         </div>
       </div>
     </div>
