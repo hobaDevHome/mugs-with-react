@@ -1,7 +1,7 @@
 import React from 'react';
 import Filter from './Filter';
 
-const categories = ['White', 'Green', 'Blue', 'All', 'Black'];
+const categories = ['White', 'Blue', 'All', 'Black'];
 
 function Filters() {
 
